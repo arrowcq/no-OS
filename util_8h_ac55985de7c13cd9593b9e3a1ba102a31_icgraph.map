@@ -1,0 +1,7 @@
+<map id="srt_to_uint32" name="srt_to_uint32">
+<area shape="rect" id="node1" title=" " alt="" coords="221,81,328,108"/>
+<area shape="rect" id="node2" href="$iio__ad7799_8c.html#a2e9b283b97073e50c0de4e00d994f281" title="Write ADC Gain value." alt="" coords="5,5,173,32"/>
+<area shape="rect" id="node3" href="$adc__demo_8h.html#a144d210111a213e1988e617a506579d1" title="set attributes for adc." alt="" coords="16,56,163,83"/>
+<area shape="rect" id="node4" href="$dac__demo_8h.html#a6a5e0a41a1b57a19161cf5d86a50e437" title="set attributes for dac." alt="" coords="16,107,163,133"/>
+<area shape="rect" id="node5" href="$demo__dev_8h.html#a3fcec6b5cf49b4e8c0a28f79cec9233a" title="set_demo_attr()." alt="" coords="31,157,147,184"/>
+</map>

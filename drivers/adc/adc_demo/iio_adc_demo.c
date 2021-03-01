@@ -1,7 +1,7 @@
 /***************************************************************************//**
- *   @file   iio_adc_demo.h
- *   @brief  Header file of ADC Demo iio.
- *   @author RNechita (ramona.nechita@analog.com)
+ *   @file   iio_adc_demo.c
+ *   @brief  Implementation of adc_demo iio.
+ *   @author Andrei Drimbarean (andrei.drimbarean@analog.com)
 ********************************************************************************
  * Copyright 2021(c) Analog Devices, Inc.
  *
@@ -37,13 +37,10 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 *******************************************************************************/
 
-#ifndef IIO_DEMO_ADC
-#define IIO_DEMO_ADC
+#include "iio_adc_demo.h"
 
-#include <stdlib.h>
-#include "adc_demo.h"
-#include "iio_types.h"
+struct iio_device const adc_demo_iio_descriptor = {
+	.debug_reg_read = (int32_t (*)()) adc_demo_reg_read,
+	.debug_reg_write = (int32_t (*)()) adc_demo_reg_write
+};
 
-extern struct iio_device const adc_demo_iio_descriptor;
-
-#endif /* IIO_DEMO_ADC */

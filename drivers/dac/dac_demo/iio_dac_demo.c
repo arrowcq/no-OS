@@ -1,7 +1,7 @@
 /***************************************************************************//**
- *   @file   iio_dac_demo.h
- *   @brief  Header file of DAC Demo iio.
- *   @author RNechita (ramona.nechita@analog.com)
+ *   @file   iio_dac_demo.c
+ *   @brief  Implementation of dac_demo IIO Driver.
+ *   @author Andrei Drimbarean (andrei.drimbarean@analog.com)
 ********************************************************************************
  * Copyright 2021(c) Analog Devices, Inc.
  *
@@ -35,15 +35,13 @@
  * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
 *******************************************************************************/
 
-#ifndef IIO_DEMO_DAC
-#define IIO_DEMO_DAC
+#include "iio_dac_demo.h"
 
-#include <stdlib.h>
-#include "dac_demo.h"
-#include "iio_types.h"
+struct iio_device const dac_demo_iio_descriptor = {
+	.debug_reg_read = (int32_t (*)()) dac_demo_reg_read,
+	.debug_reg_write = (int32_t (*)()) dac_demo_reg_write
+};
 
-extern struct iio_device const dac_demo_iio_descriptor;
-
-#endif /* IIO_DEMO_DAC */
